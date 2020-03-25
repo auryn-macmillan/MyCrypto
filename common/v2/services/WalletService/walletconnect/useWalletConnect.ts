@@ -72,7 +72,7 @@ export function useWalletConnect(): IUseWalletConnect {
         );
       }
 
-      if (!isExpectedAddress(from, state.detectedAddress!)) {
+      if (!isExpectedAddress(from, state.detectedAddress)) {
         dispatch({
           type: WcReducer.actionTypes.SIGN_FAILURE,
           error: { code: WcReducer.errorCodes.WRONG_ADDRESS }
